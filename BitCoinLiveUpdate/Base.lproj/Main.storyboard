@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BitCoinLiveUpdate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XMD-eL-YnF">
+                                <rect key="frame" x="112.5" y="20" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="O8Y-n3-Dtz"/>
+                                    <constraint firstAttribute="height" constant="150" id="aff-Ee-aUi"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAC-hE-NZC">
+                                <rect key="frame" x="0.0" y="332" width="375" height="335"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="jod-8i-OD1"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="p2M-EP-4WW"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="WRS-RM-moB">
+                                <rect key="frame" x="60" y="200" width="254" height="82"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="60"/>
+                                <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23137254901960785" green="0.29411764705882354" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eAC-hE-NZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="356-eA-tU7"/>
+                            <constraint firstItem="XMD-eL-YnF" firstAttribute="centerX" secondItem="eAC-hE-NZC" secondAttribute="centerX" id="GGk-ie-ha8"/>
+                            <constraint firstItem="eAC-hE-NZC" firstAttribute="top" secondItem="WRS-RM-moB" secondAttribute="bottom" constant="50" id="J92-wU-AJV"/>
+                            <constraint firstItem="WRS-RM-moB" firstAttribute="top" secondItem="XMD-eL-YnF" secondAttribute="bottom" constant="30" id="Qew-Wq-zTD"/>
+                            <constraint firstItem="eAC-hE-NZC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TPR-Bg-MtK"/>
+                            <constraint firstItem="eAC-hE-NZC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yf9-kg-uZM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WRS-RM-moB" secondAttribute="trailing" constant="61" id="d8Y-g6-KUC"/>
+                            <constraint firstItem="XMD-eL-YnF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f1N-UN-1aK"/>
+                            <constraint firstItem="WRS-RM-moB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="wxV-xr-JI5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bitcoinPriceLable" destination="WRS-RM-moB" id="xZO-lo-Gxf"/>
+                        <outlet property="currencyPicker" destination="eAC-hE-NZC" id="y46-B1-IMV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bitLogo" width="3840" height="2160"/>
+    </resources>
+</document>
